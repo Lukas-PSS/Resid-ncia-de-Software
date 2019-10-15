@@ -1,0 +1,75 @@
+p{  
+    color: white;
+    font-family: Franklin Gothic Medium;	
+    padding: 15px 50px;
+    margin: 0px 100px;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 40px 400px 25px;
+    border-bottom: 2px	solid black;
+}
+
+h2{
+    color: rgb(32, 53, 167);
+    font-family: Franklin Gothic Medium;
+    text-align: center;
+    border-bottom: 2px	solid black;
+    margin: 40px 450px 25px;
+}
+
+body{
+    margin-left:	auto;
+	margin-right:	auto;
+	width: 1100px;
+    border: 3px groove black;
+    background-image: url(https://images.unsplash.com/photo-1462556791646-c201b8241a94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60);
+}
+
+figure	{
+    border: 2px	groove rgb(70, 70, 70);
+    text-align:	left;
+    padding: 5px 5px;
+   
+}  
+    
+figcaption	{
+    margin-top: 1px;
+    font-style:	italic;
+    color: yellow   
+}
+
+#centro-distribuicao	{ 
+    
+    float: left;
+    margin: 0px 30px 10px 100px;
+}
+
+#rodape	{ 
+    color:rgb(93, 195, 253); 
+    margin: 20px 0px 0px; 
+}
+
+#rodape img	{ 
+    margin-right: 30px; 
+    vertical-align:	middle; 
+    width: 100px; 
+}
+
+#familia-pelho	{ 
+    float:	right; 
+    margin: 0px 100px 10px 10px; 
+    
+}
+
+#centro-distribuicao img {
+    width: 514px;
+
+}
+
+
+
+

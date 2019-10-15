@@ -1,0 +1,226 @@
+body{
+    font-size:15px;
+    background-image:	url(../img/bodybackuniverse.jpg); 
+    background-repeat:	no-repeat; 
+    background-position: center;
+    
+}
+
+#Principal{
+    width: 850px;
+    height: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:	url(../img/thanostrono.jpg); 
+    background-repeat:	no-repeat; 
+    background-position: center;
+    padding: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px 10px;
+        
+        
+        border-radius: 6px;
+        border: 1px solid #131212e7;
+        box-shadow:
+            0px 2px 7px rgba(8, 8, 8, 0.904),
+            inset 0px 0px 7px rgb(66, 220, 255);
+        
+    
+
+    
+} 
+
+
+#Perfil{
+    text-align: center;
+    width: 280px;
+    height: 415px;
+    margin: 15px 15px 0px 15px;
+    background-color: white;
+    float: left;
+
+
+	color: #0505054d;
+	
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#4d064d52),
+		color-stop(0.50, #0000009f),
+		color-stop(0.50, #0000009f),
+		to(#00000044));
+	
+	border-radius: 10px;
+	border: 1px solid #4c1266d3;
+	box-shadow:
+		0px 1px 3px rgba(31, 2, 85, 0.568),
+		inset 0px 0px 2px rgb(25, 2, 46);
+	
+
+   
+    }
+    
+    #Perfil img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; 
+        border: 1px solid #31d6ff; 
+        margin-top: 5px;
+            
+    }
+    
+       h1{
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size:25px;
+        margin: 5px ;   
+        color:white;
+    }
+
+    p{
+        margin: 20px; 
+        font-family: Arial, Helvetica, sans-serif ;
+        color: white;    
+    }
+    
+    #Redes{
+        width: 280px;
+        height: 125px;
+        margin: 15px 15px;
+        background-color: white;
+        float: right;
+
+       
+        color: #0505054d;
+	
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#4d064d52),
+            color-stop(0.50, #0000009f),
+            color-stop(0.50, #0000009f),
+            to(#00000044));
+        
+        border-radius: 10px;
+        border: 1px solid #4c1266d3;
+        box-shadow:
+            0px 1px 3px rgba(31, 2, 85, 0.568),
+            inset 0px 0px 2px rgb(25, 2, 46);
+        
+	
+        
+    }
+    
+    #Redes img{
+        width: 50px;
+        height: 50px;
+        margin: 30px 19px;
+        border-radius: 50%;
+        border: 1px solid #31d6ff; 
+
+        
+    }
+    
+    #Filmes{
+        width: 500px;
+        height: 552px;
+        margin: 15px 15px 0px 0px;
+        background-color: white;
+        float: right;
+        padding: 10px ;
+      
+        
+        color: #0505054d;
+	
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#4d064d52),
+            color-stop(0.50, #0000009f),
+            color-stop(0.50, #0000009f),
+            to(#00000044));
+        
+        border-radius: 10px 10px 0px 0px;
+        border: 1px solid #4c1266d3;
+        box-shadow:
+            0px 1px 3px rgba(31, 2, 85, 0.568),
+            inset 0px 0px 2px rgb(25, 2, 46);
+    
+    }
+    
+    #Filmes img{
+        width: 120px;
+        height: 150px;
+        margin-right: 5px;
+        float: left;
+        border: 1px solid #31d6ff;
+     
+    }
+    
+    #Filmes p {
+        margin: 0px 10px 50px 0px;   
+    }
+
+
+    h2{
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size:16px;
+        margin: 15px;
+        color: white;
+    }
+
+    #Sobre{
+        width: 815px;
+        height: 120px;
+        margin: 0px 15px 15px 0px;
+        background-color: white;
+        float: right;
+
+        color: #0505054d;
+	
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#4d064d52),
+		color-stop(0.50, #0000009f),
+		color-stop(0.50, #0000009f),
+		to(#00000044));
+	
+	border-radius: 10px 0px 10px 10px;
+	border: 1px solid #4c1266d3;
+	box-shadow:
+		0px 1px 3px rgba(31, 2, 85, 0.568),
+		inset 0px 0px 2px rgb(25, 2, 46);
+        
+    }
+
+    #Sobre p{
+        margin-right: 200px;
+        font-size:13px;
+    }
+
+    
+
+    button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            padding: 10px 20px;
+            background: -webkit-gradient(
+                linear, left top, left bottom,
+                from(#6c5cad),
+                to(#00061f));
+            background: linear-gradient(
+                top,
+                #6c5cad 0%,
+                #00061f);
+            border-radius: 10px;
+            border: 1px solid #31d6ff;
+            box-shadow:
+                0px 1px 3px rgba(000,000,000,0.4),
+                inset 0px 0px 1px rgba(255,255,255,0.5);
+            text-shadow:
+                0px -1px 0px rgba(000,000,000,0.7),
+                0px 1px 0px rgba(255,255,255,0.3);
+        }
+        
+        }
+    }

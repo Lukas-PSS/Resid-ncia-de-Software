@@ -1,0 +1,128 @@
+--Criação tabela aluno--
+
+CREATE TABLE aluno(
+	matricula integer PRIMARY KEY AUTOINCREMENT,
+	nome varchar(255) NOT NULL,
+	email varchar(255),
+	turma integer(1) NOT NULL  
+);
+
+CREATE TABLE disciplina(
+	id_disciplina integer PRIMARY KEY NOT NULL,
+	nome VARCHAR(255) NOT NULL,
+	carga_horaria INTEGER NOT NULL
+);
+-- criançao da tabela pauta
+CREATE TABLE pauta(
+	id_pauta integer PRIMARY KEY NOT NULL,
+	matricula integer NOT NULL,
+	id_disciplina integer NOT NULL,
+	nota_1 decimal NOT NULL,
+	nota_2 decimal NOT NULL,
+	nota_3 decimal NOT NULL,
+	FOREIGN KEY(matricula) REFERENCES aluno(matricula),
+	FOREIGN KEY(id_disciplina) REFERENCES disciplina(id_disciplina)
+);
+
+--alreração nome da coluna:
+
+ALTER TABLE pauta
+RENAME COLUMN nota_1 TO avaliacao_1;
+ALTER TABLE pauta
+RENAME COLUMN nota_2 TO avaliacao_2;
+ALTER TABLE pauta
+RENAME COLUMN nota_3 TO avaliacao_3;
+
+
+--Inserção de Dados na Tabela Aluno:
+
+INSERT INTO aluno(nome, email, turma)
+VALUES
+('Ana Paula Silva', 'aps@residencia.com.br', 1),
+('João Souza', 'js@residencia.com.br', 1),
+('Maria Moreira', 'mm@residencia.com.br', 1),
+('Daiane Costa', 'dc@residencia.com.br', 2),
+('Guilherme Silva', 'gs@residencia.com.br', 1),
+('Júlia Almeida', 'ja@residencia.com.br',2),
+('Diogo Andrade', 'da@residencia.com.br', 2),
+('Manuela Botelho', 'mb@gmail.com', 1),
+('Thiago Tavares', 'tt@residencia.com', 2),
+('João Pedro Carvalho', 'jpc@residencia.com.br', 1);
+
+--inserçaõ de dados na tabela disciplina:
+
+INSERT INTO disciplina(nome, carga_horaria)
+VALUES
+('Banco de dados', 24),
+('Lógica de programação', 40),
+('Programação backend', 44);
+
+--inserção na tabela pauta
+
+INSERT INTO pauta(matricula, id_disciplina, avaliacao_1, avaliacao_2, avaliacao_3)
+VALUES
+((select matricula from aluno where nome like 'Ana Paula Silva'),
+(select id_disciplina from disciplina where nome like 'Banco de dados'), 10,9,10),
+((select matricula from aluno where nome like 'Ana Paula Silva'),
+(select id_disciplina from disciplina where nome like 'Lógica de programação'), 9,8,7),
+((select matricula from aluno where nome like 'Ana Paula Silva'),
+(select id_disciplina from disciplina where nome like 'Programação backend'), 7,7,9),
+((select matricula from aluno where nome like 'João Souza'),
+(select id_disciplina from disciplina where nome like 'Banco de dados'), 9,6,7),
+((select matricula from aluno where nome like 'João Souza'),
+(select id_disciplina from disciplina where nome like 'Lógica de programação'), 10,10,10),
+((select matricula from aluno where nome like 'João Souza'),
+(select id_disciplina from disciplina where nome like 'Programação backend'), 9,8,9),
+((select matricula from aluno where nome like 'Maria Moreira'),
+(select id_disciplina from disciplina where nome like 'Banco de dados'), 10,7,7),
+((select matricula from aluno where nome like 'Daiane Costa'),
+(select id_disciplina from disciplina where nome like 'Lógica de programação'), 8,6,9),
+((select matricula from aluno where nome like 'Daiane Costa'),
+(select id_disciplina from disciplina where nome like 'Programação backend'), 6,6,8),
+((select matricula from aluno where nome like 'Guilherme Silva'),
+(select id_disciplina from disciplina where nome like 'Programação backend'), 8,6,9),
+((select matricula from aluno where nome like 'Diogo Andrade'),
+(select id_disciplina from disciplina where nome like 'Banco de dados'), 8,8,10),
+((select matricula from aluno where nome like 'Manuela Botelho'),
+(select id_disciplina from disciplina where nome like 'Lógica de programação'), 5,7,7),
+((select matricula from aluno where nome like 'Thiago Tavares'),
+(select id_disciplina from disciplina where nome like 'Programação backend'), 5,5,4),
+((select matricula from aluno where nome like 'Thiago Tavares'),
+(select id_disciplina from disciplina where nome like 'Lógica de programação'), 7,7,6),
+((select matricula from aluno where nome like 'João Pedro Carvalho'),
+(select id_disciplina from disciplina where nome like 'Banco de dados'), 5,5,2);
+
+
+--atualização email Manuela
+UPDATE aluno 
+SET email = 'mb@residencia.com.br' 
+where matricula = 8;
+
+-- atualização da avaliacao_3 do joão
+UPDATE pauta
+set avaliacao_3 = 7
+where matricula = 2;
+
+--selecao nome e turma dos alunos
+select nome, turma
+FROM aluno;
+
+-- Maximo de alunos 
+SELECT MAX(matricula)
+from aluno;
+
+
+--selecionar alunos e as tres notas
+
+SELECT a.nome, p.id_disciplina, p.avaliacao_1, p.avaliacao_2, p.avaliacao_3
+from aluno a
+INNER JOIN pauta p on a.matricula = p.matricula;
+
+--selecionar nome e qtd disciplinas 
+
+SELECT a.nome, 
+COUNT (p.matricula) 
+from aluno a, pauta p, disciplina d
+WHERE a.matricula = p.matricula 
+AND d.id_disciplina = p.id_disciplina
+GROUP BY a.nome ORDER BY a.nome;
